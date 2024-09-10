@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>アンケートフォーム</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <h1 id="title">アンケートフォーム</h1>
+      <p id="description">フェイクサービスの改善にご協力いただきありがとうございます</p>
+    </header>
+    <form id="survey-form">
+      <div class="form-group">
+        <label for="name" id="name-label">お名前</label>
+          <input type="text" id="name" name="name" class="form-control" placeholder="お名前を入力してください" required  />
+        <label for="email" id="email-label">メール</label>
+          <input type="email" id="email" name="email" class="form-control" placeholder="メールアドレスを入力してください" required />
+        <label for="age" id="number-label">年齢</label>
+          <input type="number" name="age" id="number" class="form-control"  min="10" max="100" placeholder="年齢" required>
+        <p>あなたの職業を教えてください</p>
+        <select name="role" id="dropdown" class="form-control" required>
+          <option value="" disabled selected>職業を選択してください</option>
+          <option value="学生">学生</option>
+          <option value="会社員">会社員</option>
+          <option value="主婦（夫）">主婦（夫）</option>
+          <option value="フリーランス">フリーランス</option>
+          <option value="無職">無職</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <p>フェイクサービスを友人にススメたいと思いますか？</p>
+        <label for="recommend">
+          <input type="radio" name="recommend" class="input-radio" value="すごく思う" checked>
+          すごく思う
+        </label>
+        <label for="recommend">
+          <input type="radio" name="recommend" class="input-radio" value="まあまあ思う">
+          まあまあ思う
+        </label>
+        <label for="recommend">
+          <input type="radio" name="recommend" class="input-radio" value="全く思わない">
+          全く思わない
+        </label>
+      </div>
+      <div class="form-group">
+        <p>フェイクサービのお気に入りの機能はなんですか？</p>
+        <select name="favorite" id="favorite" class="form-control" required>
+          <option value="" disabled selected>機能を選択してください</option>
+          <option value="ポスト投稿">ポスト投稿</option>
+          <option value="DM">DM</option>
+          <option value="お気に入り">お気に入り</option>
+          <option value="フォロー">フォロー</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <p>改善して欲しい点はなんですか？</p><span class="clue">(該当するものをすべてチェックしてください)</span>
+        <label>
+          <input name="prefer" value="画面" type="checkbox" class="input-checkbox">
+          画面
+        </label>
+        <label>
+          <input name="prefer" value="レコメンド表示" type="checkbox" class="input-checkbox">
+          レコメンド表示
+        </label>
+        <label>
+          <input name="prefer" value="リスト" type="checkbox" class="input-checkbox">
+          リスト
+        </label>
+        <label>
+          <input name="prefer" value="ポスト" type="checkbox" class="input-checkbox">
+          ポスト
+        </label>
+        <label>
+          <input name="prefer" value="相互フォロー" type="checkbox" class="input-checkbox">
+          相互フォロー
+        </label>
+        <label>
+          <input name="prefer" value="DM" type="checkbox" class="input-checkbox">
+          DM
+        </label>
+        <label>
+          <input name="prefer" value="音声配信" type="checkbox" class="input-checkbox">
+          音声配信
+        </label>
+        <label>
+          <input name="prefer" value="検索" type="checkbox" class="input-checkbox">
+          検索
+        </label>
+        <label>
+          <input name="prefer" value="AI" type="checkbox" class="input-checkbox">
+          AI
+        </label>
+        <label>
+          <input name="prefer" value="通知" type="checkbox" class="input-checkbox">
+          通知
+        </label>
+        <label>
+          <input name="prefer" value="コミュニティ" type="checkbox" class="input-checkbox">
+          コミュニティ
+        </label>
+      </div>
+      <div class="form-group">
+        <p>ご意見やご提案がありましたらお寄せください</p>
+        <textarea name="comment" id="comments" class="input-textarea" placeholder="ここにコメントを書いてください"></textarea>
+      </div>
+      <div class="form-group">
+        <button type="submit" id="submit" class="submit-button">送信する</button>
+      </div>
+    </form>
+  </div>
+</body>
+</html>
